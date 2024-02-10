@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hello Behn Ke lode"
+echo "Hello Bhai"
 
 echo "My current working directory is"
 pwd
