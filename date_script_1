@@ -1,0 +1,13 @@
+#!/bin/bash
+
+name="Kshitij Vashisth"
+
+now=$(date)
+
+echo $name
+
+echo "The system time and date is: $now"
+
+echo $now
+
+echo "Your user name is $USER"

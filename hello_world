@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Hello Behn Ke lode"
+
+echo "My current working directory is"
+pwd

@@ -1,0 +1,35 @@
+#!/bin/bash
+a=2
+b=2
+
+echo "difference 1-output to variable"
+#assigning output to a variable
+c=$(expr $a + $b)
+echo "using expr $c" 
+
+c=$((a+b))
+echo "not using expr $c"
+
+
+echo "difference 2-printing value of operation directly"
+#to print value without using expr
+echo "we are not using expr $((a+b))"
+
+#to print value with expr
+echo "using expr"
+#note the use of echo without using expr because that turns it into a command
+expr $a + $b
+ #to use the above value in one statement simply use a bracket and $
+echo "using expr $(expr $a + $b)"
+
+echo "use case 3 multiplication"
+#to multiply using expr you have to use escape character \
+expr $a \* $b
+
+#but if you don't use expr you can work without escape character
+#but you either have to assign value to a variable or echo it
+echo "multiplication not using expr $((a*b)) without variable"
+c=$((a*b))
+
+echo "multiplication not using expre $c but with variable use"
+
