@@ -1,21 +1,21 @@
 #!/bin/bash
 
 #bash_script git push
-echo "Pushing files for bash scripting....\n"
+echo "Pushing files for bash scripting...."
 git add *
 git commit -a
 git push
 
 #career_portal git push
-cd ../car_web/kayveez_car_web/
-echo "Pushing files for career web job portal....\n"
+cd ../kvz_jobs/kayveeZ_car_web_v2/
+echo "Pushing files for career web job portal...."
 git add *
 git commit -a
 git push
 
 #learning webjs git push
 cd /mnt/c/codes/js/
-echo "Pushing files for java script web development"
+echo "Pushing files for java script web development..."
 git add *
 git commit -a
 git push
