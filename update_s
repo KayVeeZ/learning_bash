@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#universal update script
+if [ -d /etc/pacman.d ]
+then
+    # The host is based on Arch, rum the pacman update command
+    sudo pacman -Syu
+fi
+
+if [ -d /etc/apt ]
+then
+    # The host is based on Debian or Ubuntu
+    # Run the apt version of the command
+    sudo apt update
+    sudo apt dist-upgrade
+fi
