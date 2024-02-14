@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#bash_script git push
+git add *
+git commit -a
+git push
+
+#career_portal git push
+cd ../car_web/kayveez_car_web/
+git add *
+git commit -a
+git push
+
+#learning webjs git push
+cd /mnt/c/codes/js/
+git add *
+git commit -a
+git push
