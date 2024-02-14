@@ -1,0 +1,18 @@
+#!/bin/bash
+
+package=htop
+
+# >> appends the output of the command and send it to the filename
+sudo apt install $package >> package_install_results.log
+
+echo "The exit code for the install is: $?."
+
+#this if condition checks if exit code is 0 or not, -eq stands for equal
+if [ $? -eq 0 ]
+then
+    echo "The installation of $package was successful." 
+    echo "The new command is available here:"
+    which $package
+else
+    echo "$package failed to install!"
+fi
