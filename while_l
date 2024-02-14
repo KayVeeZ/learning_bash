@@ -1,0 +1,18 @@
+#!/bin/bash
+
+myvar=1
+touch testfile
+while [ -f testfile ]
+do
+    t=$(echo `date +"%T"`)
+    echo "As of $t, file exists"
+    myvar=$(( $myvar +1 ))
+    sleep 1
+    if [ $myvar -eq 5 ]
+    then
+	rm testfile
+        sleep 1
+    fi
+done
+TIME=$(echo `date +"%T"`)
+echo "As of $TIME, file doesn't exist"
