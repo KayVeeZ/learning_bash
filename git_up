@@ -2,6 +2,7 @@
 
 #bash_script git push
 echo "Pushing files for bash scripting...."
+cd ~/wd/documents/code/bash_scripts
 git add *
 git commit -a
 git push
