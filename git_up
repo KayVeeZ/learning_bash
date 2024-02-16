@@ -26,5 +26,5 @@ do
     P12=$!
     wait $P12 
 done
-
+# check is it fixed
 echo "Updated all github repositories."
