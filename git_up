@@ -7,11 +7,11 @@ msg=( "Pushing files for bash scripting..." "Pushing files for career web job po
 for i in {0..2}
 do
     
-    echo "${msg[$i]}"
-    cd "${dirs[$i]}" && pwd &
+    echo "${msg[$i]}" && cd "${dirs[$i]}" & 
     echo $!
     PID=$!
     wait $PID
+    pwd
 
     git add *
     echo $!
