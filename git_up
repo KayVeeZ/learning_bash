@@ -12,7 +12,7 @@ do
     echo $!
     PID=$!
     wait $PID
-    pwd
+    echo "we are in : $(pwd)"
 
     git add *
     echo $!
