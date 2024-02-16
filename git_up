@@ -1,13 +1,14 @@
 #!/bin/bash
 
 
-dirs=( `~/wd/'My Documents'/code/bash_scripts` `~/wd/'My Documents'/code/kvz_jobs/kayveez_car_web_v2` "/mnt/c/codes/js/" )
+dirs=( "/home/thehuntsman/wd/documents/code/bash_scripts" "/home/thehuntsman/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" )
 msg=( "Pushing files for bash scripting..." "Pushing files for career web job portal..." "Pushing files for java script web development..." )
 
-for i in {0..2}
+for dir in ${!dirs[@]}
 do
     
-    echo "${msg[$i]}" && cd "${dirs[$i]}" & 
+    echo "${msg[$dir]}" 
+    cd ${dirs[$dir]} 
     echo $!
     PID=$!
     wait $PID
