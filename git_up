@@ -1,22 +1,16 @@
 #!/bin/bash
 
-#bash_script git push
-echo "Pushing files for bash scripting...."
-cd ~/wd/documents/code/bash_scripts
-git add *
-git commit -a
-git push
 
-#career_portal git push
-cd ../kvz_jobs/kayveeZ_car_web_v2/
-echo "Pushing files for career web job portal...."
-git add *
-git commit -a
-git push
+dirs=( "~/wd/documents/code/bash_scripts" "~/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" )
+msg=( "Pushing files for bash scripting..." "Pushing files for career web job portal..." "Pushing files for java script web development" )
 
-#learning webjs git push
-cd /mnt/c/codes/js/
-echo "Pushing files for java script web development..."
-git add *
-git commit -a
-git push
+for i in {0..2}
+do
+    echo "$msg[$i]"
+    cd $dirs[$i]
+    git add *
+    git commit -a
+    git push
+done
+
+echo "Updated all github repositories."
