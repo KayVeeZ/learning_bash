@@ -6,8 +6,8 @@ msg=( "Pushing files for bash scripting..." "Pushing files for career web job po
 
 for i in {0..2}
 do
-    echo "$msg[$i]"
-    cd $dirs[$i]
+    echo "${msg[$i]}"
+    cd "${dirs[$i]}"
     git add *
     git commit -a
     git push
