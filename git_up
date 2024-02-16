@@ -6,6 +6,7 @@ msg=( "Pushing files for bash scripting..." "Pushing files for career web job po
 
 for i in {0..2}
 do
+    pwd
     cd "${dirs[$i]}" && echo "${msg[$i]}" &
     echo $!
     PID=$!
