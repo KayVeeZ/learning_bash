@@ -3,7 +3,7 @@
 
 dirs=( "/home/thehuntsman/wd/documents/code/bash_scripts" "/home/thehuntsman/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" )
 msg=( "Pushing files for bash scripting..." "Pushing files for career web job portal..." "Pushing files for java script web development..." )
-
+exit_c=( 0 0 0 )
 for dir in ${!dirs[@]}
 do
     
@@ -27,7 +27,13 @@ do
     git push
     echo $!
     P12=$!
-    wait $P12 
+    wait $P12
+
+    a[i]=$? 
 done
 # check is it fixed
-echo "Updated all github repositories."
+if [ ${exit_c[0]} -eq 0 && ${exit_c[1]} -eq 0 && ${exit_c[2]} -eq 0 ]
+then
+    echo "Updated all github repositories."
+else
+    echo "Failed to update some/all repositories"
