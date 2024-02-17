@@ -3,6 +3,7 @@
 
 dirs=( "/home/thehuntsman/wd/documents/code/bash_scripts" "/home/thehuntsman/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" )
 msg=( "Update bash scripting repository..." "Update career web job portal repository..." "Update java script web development repository..." )
+repo_names=( "bash scripting repository" "career web job portal repository" "java script web development repository" )
 exit_c=( 10 10 10 )
 for dir in "${!dirs[@]}"
 do
@@ -31,10 +32,18 @@ do
 
     exit_c[$dir]=$? 
 done
+
+exit_c[1]=2
 # check for whether the repos get updated or not
 if [ ${exit_c[0]} -eq 0 ] && [ ${exit_c[1]} -eq 0 ] && [ ${exit_c[2]} -eq 0 ]
 then
     echo "Updated all github repositories."
 else
-    echo "Failed to update some/all repositories"
+    for i in "${!exit_c[@]}" 
+    do
+        if [ ! ${exit_c[$i]} -eq 0 ] 
+            then
+                echo "Failed to update ${repo_names[$i]}"
+            fi
+    done
 fi
