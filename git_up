@@ -33,7 +33,6 @@ do
     exit_c[$dir]=$? 
 done
 
-exit_c[1]=2
 # check for whether the repos get updated or not
 if [ ${exit_c[0]} -eq 0 ] && [ ${exit_c[1]} -eq 0 ] && [ ${exit_c[2]} -eq 0 ]
 then
@@ -43,7 +42,7 @@ else
     do
         if [ ! ${exit_c[$i]} -eq 0 ] 
             then
-                echo "Failed to update ${repo_names[$i]}"
+                echo "Failed to update ${repo_names[$i]}..."
             fi
     done
 fi
