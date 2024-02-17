@@ -29,7 +29,7 @@ do
     P12=$!
     wait $P12
 
-    a[i]=$? 
+    exit_c[$i]=$? 
 done
 # check is it fixed
 if [ ${exit_c[0]} -eq 0 && ${exit_c[1]} -eq 0 && ${exit_c[2]} -eq 0 ]
@@ -37,3 +37,4 @@ then
     echo "Updated all github repositories."
 else
     echo "Failed to update some/all repositories"
+fi
