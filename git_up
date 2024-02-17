@@ -7,26 +7,21 @@ repo_names=( "bash scripting repository" "career web job portal repository" "jav
 exit_c=( 10 10 10 )
 for dir in "${!dirs[@]}"
 do
-    
     echo "${msg[$dir]}" 
     cd "${dirs[$dir]}"
-    echo $!
     PID=$!
     wait $PID
     echo "we are in : $(pwd)"
 
     git add *
-    echo $!
     P14=$!
     wait $P14
 
     git commit -a
-    echo $!
     P13=$!
     wait $P13
 
     git push
-    echo $!
     P12=$!
     wait $P12
 
