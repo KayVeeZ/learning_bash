@@ -1,0 +1,5 @@
+to add to path in linux,
+use the following command:
+export PATH=/path:$PATH
+
+replace '/path' with whatever path the script is in to be able to run it from anywhere.
