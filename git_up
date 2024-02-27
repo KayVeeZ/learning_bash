@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-dirs=( "/home/thehuntsman/wd/documents/code/bash_scripts" "/home/thehuntsman/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" "/mnt/c/python_ML_DL" )
-msg=( "Update bash scripting repository..." "Update career web job portal repository..." "Update java script web development repository..." "Update machine learning repository..." )
-repo_names=( "bash scripting repository" "career web job portal repository" "java script web development repository" "machine learning repository" )
-exit_c=( 10 10 10 10 )
+dirs=( "/home/thehuntsman/wd/documents/code/bash_scripts" "/home/thehuntsman/wd/documents/code/kvz_jobs/kayveez_car_web_v2" "/mnt/c/codes/js/" "/mnt/c/python_ML_DL" "/mnt/c/application/CV/github" )
+msg=( "Update bash scripting repository..." "Update career web job portal repository..." "Update java script web development repository..." "Update machine learning repository..." "Grabbing latest CV information...." )
+repo_names=( "bash scripting repository" "career web job portal repository" "java script web development repository" "machine learning repository" "cv repository" )
+exit_c=( 10 10 10 10 10 )
 for dir in "${!dirs[@]}"
 do
     echo "${msg[$dir]}" 
