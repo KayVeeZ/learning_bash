@@ -1,0 +1,34 @@
+- To use cron, type: crontab -e
+- this opens a temp file which will be saved upon acceptance to cron.
+  this will be used to schedule cron jobs.
+- If you do not use sudo, the cron jobs will be made for the current user,
+  but, with sudo, it will be done for every user.
+- the first time this command is run, it will ask for the text-editor of choice
+- only use full address script/command with cron, it might not pick up on path,
+  rather than on some local malignant file which might cause the system harm.
+- the format is: minute hour dom month dow command
+- example: 30 * * * * /usr/bin/echo "Cron job"
+           this runs the echo command every time the minute hand says 30.
+           NOTE: This does not run it every 30 minutes, as the minute hand can 
+           only say 30 once in an hour.
+- example: 30 3 10 7 4 /usr/bin/echo "Cron job"
+           this will only run 3:30 am on 10th July if this date falls on a Thursday.
+- if we want to change cronjobs for a particular user, eg. bob, the command will be:
+  sudo crontab -u bob -e
+- These special time specification "nicknames" which replace the 5 initial time and date fields, 
+  and are prefixed with the '@' character, are supported:
+  @reboot    :    Run once after reboot.
+  @yearly    :    Run once a year, ie.  "0 0 1 1 *".
+  @annually  :    Run once a year, ie.  "0 0 1 1 *".
+  @monthly   :    Run once a month, ie. "0 0 1 * *".
+  @weekly    :    Run once a week, ie.  "0 0 * * 0".
+  @daily     :    Run once a day, ie.   "0 0 * * *".
+  @hourly    :    Run once an hour, ie. "0 * * * *".
+- To check if cron is running:
+  ps ax | grep cron
+- Check if cron can run your job, use this to check for errors:
+  cat /var/log/cron.log
+  or
+  cat /var/log/messages
+  For Ubuntu: grep CRON /var/log/syslog
+  For Redhat: /var/log/cron
