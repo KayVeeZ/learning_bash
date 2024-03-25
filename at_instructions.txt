@@ -5,3 +5,8 @@
 - atq can also be used to see queue
 - to remove the job: atrm <process number>
 - this can also be used to remove the job: at -r <process number> 
+- For a batch remove you can use: atrm $(atq | cut -f1)
+- The at utility is not that common on the wild, cron on the other hand is everywhere. 
+  Knowing how at works is valuable still since it allows to schedule one time things easily: stopped 
+  a daemon for maintenance? schedule the start command so that it definitely restarts it again 
+  even if you forget.
