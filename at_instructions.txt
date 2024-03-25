@@ -1,0 +1,7 @@
+- You can use the at command to schedule jobs.
+- For example:
+  at <time: eg. 15:32> -f ./<script_name or command>
+- at -l can be used to see a list of scheduled commands, i.e., process number time etc.
+- atq can also be used to see queue
+- to remove the job: atrm <process number>
+- this can also be used to remove the job: at -r <process number> 
